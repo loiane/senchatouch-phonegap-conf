@@ -1,0 +1,169 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Login"
+    },
+    "designerId": "464febf7-65a8-436d-8c71-3982899506e5",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "loginform #loginbtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onLogInButtonTap",
+                "implHandler": [
+                    "var form = button.up('loginform'),",
+                    "    user = form.down('#user'),",
+                    "    pass = form.down('#pass'),",
+                    "    label = form.down('#failmsg'),",
+                    "    me = this;",
+                    "",
+                    "label.hide();",
+                    "",
+                    "var userName = user.getValue(),",
+                    "    password = pass.getValue();",
+                    "",
+                    "var task = Ext.create('Ext.util.DelayedTask', function () {",
+                    "    label.setHtml('');",
+                    "    me.onSignInCommand(form, userName, password);",
+                    "    user.setValue('');",
+                    "    pass.setValue('');",
+                    "});",
+                    "",
+                    "task.delay(500);"
+                ],
+                "name": "tap"
+            },
+            "designerId": "4bd72aaa-5571-431c-8fba-e4f353484c42"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "login",
+                    "username",
+                    "password"
+                ],
+                "fn": "onSignInCommand",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if (username.length === 0 || password.length === 0) {",
+                    "    login.showSignInFailedMessage('Por favor, informe seu usuário e senha.');",
+                    "    return;",
+                    "}",
+                    "",
+                    "login.setMasked({",
+                    "    xtype: 'loadmask',",
+                    "    message: 'Fazendo Login...'",
+                    "});",
+                    "",
+                    "if (username.length > 0 || password.length > 0) {",
+                    "    me.signInSuccess();",
+                    "}"
+                ]
+            },
+            "designerId": "55e95359-cea3-4b14-a3d7-9e91f76932be"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "signInSuccess",
+                "implHandler": [
+                    "var me = this,",
+                    "    login = me.getLoginForm(),",
+                    "    mainPanel = me.getMainPanel(),",
+                    "    myViewport = me.getMyViewport();",
+                    "",
+                    "login.setMasked(false);",
+                    "myViewport.animateActiveItem(mainPanel, {type: 'slide', direction: 'left'});"
+                ]
+            },
+            "designerId": "f6224e6b-6420-48de-8ec6-86e709ab2d30"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "loginForm",
+                "selector": "loginform",
+                "xtype": "Ext.form.Panel"
+            },
+            "designerId": "54703e35-01dc-4689-a2d5-c0beea8f218a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "myViewport",
+                "selector": "myviewport",
+                "xtype": "Ext.Container"
+            },
+            "designerId": "e672792f-e401-4a2a-8597-95e66f7ebb62"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainPanel",
+                "selector": "main",
+                "xtype": "Ext.Panel"
+            },
+            "designerId": "bb6eff45-ebc7-4528-8e1e-1d168f1f9815"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "main button#logoutbtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onLogOutButtonTap",
+                "implHandler": [
+                    "var me = this,",
+                    "    login = me.getLoginForm(),",
+                    "    myViewport = me.getMyViewport();",
+                    "",
+                    "myViewport.animateActiveItem(login, {type: 'slide', direction: 'right'});"
+                ],
+                "name": "tap"
+            },
+            "designerId": "f7e6dc19-75f5-4235-96ac-024b5c657746"
+        }
+    ]
+}

@@ -1,0 +1,130 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "loginform",
+        "designer|userClassName": "Login",
+        "html": null,
+        "padding": "10px",
+        "styleHtmlContent": true
+    },
+    "designerId": "4fe3a419-72ce-4b25-b938-b91ed129016c",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Login"
+            },
+            "designerId": "333377b5-56f2-4e52-84bc-04618b84a3c0"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "hideAnimation": "fadeOut",
+                "html": "Por favor, entre com as credenciais corretas",
+                "itemId": "failmsg",
+                "showAnimation": "fadeIn",
+                "style": "color: #990000; margin:5px 0px;"
+            },
+            "designerId": "a65884c5-e1f0-4ddd-82a5-5d0a7a13fe8f"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Login"
+            },
+            "designerId": "c809e142-20dc-4544-9121-563cbeae0c2d",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "user",
+                        "label": null,
+                        "placeHolder": "usuário",
+                        "required": true
+                    },
+                    "designerId": "62044a63-de4b-4ef0-91fd-3d08edf0feab"
+                },
+                {
+                    "type": "Ext.field.Password",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "pass",
+                        "label": null,
+                        "placeHolder": "senha",
+                        "required": true
+                    },
+                    "designerId": "49c76f03-ae54-4bdd-9007-62d2aad0cdf7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|uiInterfaceName": "action-round",
+                "itemId": "loginbtn",
+                "margin": 20,
+                "padding": null,
+                "style": null,
+                "text": "Entrar",
+                "ui": "action-round"
+            },
+            "designerId": "613e15b8-f366-4a0c-ab68-a8613ab95dd3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "message"
+                ],
+                "fn": "showSignInFailedMessage",
+                "implHandler": [
+                    "var label = this.down('#failmsg');",
+                    "label.setHtml(message);",
+                    "label.show();"
+                ]
+            },
+            "designerId": "648e4372-ea3d-43e1-ae2a-6b234124cf24"
+        }
+    ]
+}

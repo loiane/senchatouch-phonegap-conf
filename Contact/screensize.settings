@@ -1,0 +1,18 @@
+{
+    "profiles": [
+        {
+            "name": "Nexus S",
+            "width": 480,
+            "height": 800,
+            "builtIn": false,
+            "fw": "touch"
+        },
+        {
+            "name": "Nexus S",
+            "width": 480,
+            "height": 800,
+            "builtIn": false,
+            "fw": "touch"
+        }
+    ]
+}

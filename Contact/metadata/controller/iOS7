@@ -1,0 +1,35 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "iOS7"
+    },
+    "designerId": "dcf32fee-436d-4437-afdb-2f509cdc0819",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container",
+                "designer|targetType": "MyViewport",
+                "fn": "onContainerActiveItemChange",
+                "implHandler": [
+                    "if (Ext.os.is.iOS && Ext.os.version.major >= 7) {",
+                    "  Ext.select(\".x-toolbar\").applyStyles(\"height: 62px; padding-top: 15px;\");",
+                    "}",
+                    ""
+                ],
+                "name": "activeitemchange"
+            },
+            "designerId": "8bdca465-d4ea-4c9a-8676-920ef1d91069"
+        }
+    ]
+}

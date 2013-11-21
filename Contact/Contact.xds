@@ -1,0 +1,69 @@
+{
+    "name": "Contact",
+    "settings": {
+        "cmd": {
+            "license": "gpl",
+            "cmdVersion": "4.0.1.45",
+            "frameworkVersion": "2.3.0.328"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "",
+        "exportPath": "/Applications/XAMPP/xamppfiles/htdocs/blog/ContactBuild",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "lastBuildSelection": {
+            "value": "iosSimulate",
+            "display": "Simulate on iOS"
+        }
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 1337,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000003,
+    "framework": "touch23",
+    "viewOrderMap": {
+        "view": [
+            "e83d8bd0-aa8b-4b79-bf87-9a8797bca19b",
+            "b037ea3a-5bcd-4f85-930a-abaa1bdc4dcd",
+            "7187cc37-7c2e-4f8a-a763-ba7d3f34a79c",
+            "266d5780-ee4a-4dca-a156-841cf77894ee",
+            "5b610c64-3053-4d2f-8bfb-77077b9b2217",
+            "ab0ebc18-fc5b-43b1-8958-7395bd191769",
+            "4fe3a419-72ce-4b25-b938-b91ed129016c",
+            "f83b86fe-5822-43e4-afe1-0bb549335fb2"
+        ],
+        "store": [
+            "8173b689-b7f9-4661-9bb0-6cba367d3d80"
+        ],
+        "controller": [
+            "12f4e105-fe10-4110-a7c7-4be456e0092e",
+            "464febf7-65a8-436d-8c71-3982899506e5",
+            "dcf32fee-436d-4437-afdb-2f509cdc0819"
+        ],
+        "model": [
+            "218f2c46-69a4-44c6-8b9e-29b8e3d800dc"
+        ],
+        "resource": [
+            "f81dd17b-02a8-4071-9594-4730c3b71ef7",
+            "83d5f462-ac48-477a-8b82-5867e132986d",
+            "4e6d3df0-b819-4e90-9e72-147a752abd4a",
+            "eba5fa5c-4ad5-46ec-be37-26ba9e5d1ae9"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

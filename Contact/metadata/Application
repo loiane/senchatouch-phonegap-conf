@@ -1,0 +1,83 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Contacts",
+            "Login",
+            "iOS7"
+        ],
+        "models": [
+            "Contact"
+        ],
+        "name": "Contact",
+        "requires": [
+            "Ext.MessageBox",
+            "Ext.device.Camera",
+            "Ext.field.Email",
+            "Ext.field.Number",
+            "Ext.form.FieldSet",
+            "Ext.field.Password",
+            "Ext.util.DelayedTask",
+            "Ext.Label"
+        ],
+        "stores": [
+            "ContactStore"
+        ],
+        "views": [
+            "Main",
+            "Info",
+            "Form",
+            "Picture",
+            "List",
+            "FavoriteView",
+            "Login",
+            "MyViewport"
+        ]
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "// Ajuste toolbar quando for iOS 7",
+                    "if (Ext.os.is.iOS && Ext.os.version.major >= 7) {",
+                    "  Ext.select(\".x-toolbar\").applyStyles(\"height: 62px; padding-top: 15px;\");",
+                    "}",
+                    "",
+                    "",
+                    "Ext.util.Format.empty = function(value, defaultValue) {",
+                    "    return !Ext.isEmpty(value) ? value : defaultValue;",
+                    "};",
+                    "Ext.util.Format.undef = function(value, defaultValue) {",
+                    "    return Ext.isDefined(value) ? value : defaultValue;",
+                    "};",
+                    "var ds = Ext.StoreMgr.lookup('ContactStore');",
+                    "",
+                    "ds.setProxy({",
+                    "    type: 'sqlitestorage',",
+                    "    dbConfig: {",
+                    "        tablename: 'contatos',",
+                    "        dbConn: Ext.DbConnection",
+                    "    },",
+                    "    model: 'Contact.model.Contact'",
+                    "});",
+                    "",
+                    "ds.load();"
+                ]
+            },
+            "designerId": "ba1fcbb2-e63e-445e-a67c-ec117224b08e"
+        }
+    ]
+}

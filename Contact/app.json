@@ -1,0 +1,68 @@
+{
+   "name": "Contact",
+   "indexHtmlPath": "index.html",
+   "url": null,
+   "js": [
+      {
+         "path": "touch/sencha-touch.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "bootstrap.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "app.js",
+         "bundle": true,
+         "update": "delta"
+      }
+   ],
+   "css": [
+      {
+         "update": "delta",
+         "platform": [
+            "phone",
+            "tablet",
+            "desktop"
+         ],
+         "theme": "Cupertino",
+         "path": "resources/css/cupertino.css",
+         "_architect_active_theme": true
+      },
+      {
+         "path": "resources/css/contacts.css"
+      }
+   ],
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      "resources/images",
+      "resources/icons",
+      "resources/startup"
+   ],
+   "ignore": [
+      ".svn$"
+   ],
+   "archivePath": "archive",
+   "requires": [],
+   "id": "1071a06e-f38b-4a2c-b619-5d50abe3b401",
+   "_architect": {
+      "_comment": "Please don't edit. This is Architect data.",
+      "name": "Contact",
+      "css": [
+         {
+            "path": "resources/css/contacts.css"
+         }
+      ],
+      "js": [],
+      "resources": [],
+      "requires": []
+   }
+}
